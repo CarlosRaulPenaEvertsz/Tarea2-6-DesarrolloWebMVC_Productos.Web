@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DesarrolloWebMVC_Productos.Web.Models.Producto>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    Descripción
+                </th>
+                <th>
+                    Tipo
+                </th>
+                <th>
+                    Precio
+                </th>
+                <th>
+                    Borrar
+                </th>
+                <th>
+                    Modificar
+                </th>
+            </tr>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>
+                        @product.Descripcion
+                    </td>
+                    <td>
+                        @product.Tipo
+                    </td>
+                    <td>
+                        @product.Precio
+                    </td>
+                    <td>
+                        <a href="/Home/Borrar?Prod=@product.Descripcion">borra?</a>
+                    </td>
+                    <td>
+                        <a href="/Home/Modificacion?Prod=@product.Descripcion">modifica?</a>
+                    </td>
+
+                </tr>
+            }
+        </table>
+        <a href="/Home/Grabar">Agregar</a>
+    </div>
+</body>
+</html>
