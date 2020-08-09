@@ -12,6 +12,8 @@
 </head>
 <body>
     <div>
+        <h2>Listado de Productos</h2>
+        <br />
         <table class="table">
             <tr>
                 <th>
@@ -43,16 +45,17 @@
                         @product.Precio
                     </td>
                     <td>
-                        <a href="/Home/Borrar?Prod=@product.Descripcion">borra?</a>
+                        <a href="/Home/Borrar?Prod=@product.Descripcion">Borrar?</a>
                     </td>
                     <td>
-                        <a href="/Home/Modificacion?Prod=@product.Descripcion">modifica?</a>
+                        <a href="/Home/Modificacion?Prod=@product.Descripcion">Modificar?</a>
                     </td>
 
                 </tr>
             }
         </table>
-        <a href="/Home/Grabar">Agregar</a>
+        <br />
+        <a href="/Home/Grabar">Agregar Producto</a>
     </div>
 </body>
 </html>

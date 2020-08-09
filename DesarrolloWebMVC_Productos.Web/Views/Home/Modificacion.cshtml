@@ -1,44 +1,47 @@
-﻿@model IEnumerable<DesarrolloWebMVC_Productos.Web.Models.Producto>
+﻿@model DesarrolloWebMVC_Productos.Web.Models.Producto
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Modificar Registros</title>
+    <title>Modificación Producto</title>
 </head>
 <body>
     <div>
         <form method="post" action="/Home/Modificacion">
-            <h1>Modificar Productos</h1>
+            <h2>Modificación de Producto</h2>
+            <br />
             <table>
                 <tr>
                     <td>Descripcion</td>
                     <td>
-                        <input type="text" name="Descripcion"
+                        <input type="text" name="Descripcion" value="@Model.Descripcion"
                     </td>
                 </tr>
                 <tr>
                     <td>Tipo</td>
                     <td>
-                        <input type="text" name="Tipo"
+                        <input type="text" name="Tipo" value="@Model.Tipo"
                     </td>
                 </tr>
                 <tr>
                     <td>Precio</td>
                     <td>
-                        <input type="text" name="Precio"
+                        <input type="text" name="Precio" value="@Model.Precio"
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style2"> </td>
                     <td>
-                        <input type="submit" name="Confirmar"
+                        <input type="submit" name="actualizar" value=" Registrar Cambios "
                     </td>
                 </tr>
 
             </table>
         </form>
+        <br />
+        <a href="/">Retornar Sin Registrar</a>
     </div>
 </body>
 </html>
